@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Bank Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="admin">
+
+    <header>
+        <h1>Bank Management System - Admin</h1>
+    </header>
+
+    <div class="container">
+
+        <!-- ========== ADMIN LOGIN ========== -->
+        <div id="adminLoginBox" class="box small-box">
+            <h2>Admin Login</h2>
+
+            <label>Admin Password</label>
+            <input type="password" id="adminPassword" placeholder="Enter admin password">
+
+            <button onclick="adminLogin()">Login</button>
+            <p class="link"><a href="index.html">Back to Customer Login</a></p>
+        </div>
+
+        <!-- ========== ADMIN PANEL (login ke baad dikhega) ========== -->
+        <div id="adminPanel" class="hidden">
+
+            <div class="topbar">
+                <h2>All Accounts</h2>
+                <button class="red" onclick="adminLogout()">Logout</button>
+            </div>
+
+            <!-- search box -->
+            <div class="toolbar">
+                <input type="text" id="adminSearch" placeholder="Search by account number or name">
+                <button onclick="showAccounts()">Search</button>
+                <button class="grey" onclick="clearAdminSearch()">Show All</button>
+            </div>
+
+            <p id="accountCount"></p>
+
+            <!-- accounts ki table -->
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Account No</th>
+                            <th>Name</th>
+                            <th>Phone</th>
+                            <th>Balance</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="accountsBody"></tbody>
+                </table>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

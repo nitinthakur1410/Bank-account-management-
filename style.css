@@ -1,0 +1,213 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #eef2f7;
+}
+
+header {
+    background: #1f4e79;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+/* ---------- LAYOUT ---------- */
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 0 15px;
+}
+
+.container.small {
+    max-width: 420px;
+}
+
+.box {
+    background: white;
+    padding: 18px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+}
+
+.small-box {
+    max-width: 420px;
+    margin: 30px auto;
+}
+
+/* ---------- FORM ---------- */
+label {
+    font-weight: bold;
+    display: block;
+    margin-top: 8px;
+    margin-bottom: 4px;
+}
+
+input {
+    width: 100%;
+    padding: 9px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.toolbar input {
+    width: auto;
+    flex: 1;
+    min-width: 180px;
+    margin-bottom: 0;
+}
+
+.note {
+    color: #666;
+    font-size: 13px;
+    margin: 0 0 10px 0;
+}
+
+/* ---------- BUTTONS ---------- */
+button {
+    padding: 9px 16px;
+    background: #1f4e79;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+button:hover {
+    background: #163a5c;
+}
+
+button.red {
+    background: #c0392b;
+}
+
+button.red:hover {
+    background: #a53125;
+}
+
+button.grey {
+    background: #7f8c8d;
+}
+
+.box > button {
+    margin-top: 6px;
+}
+
+/* ---------- TABS (login / create account) ---------- */
+.tabs {
+    display: flex;
+    gap: 6px;
+    margin-bottom: 12px;
+}
+
+.tab {
+    flex: 1;
+    background: #b8c6d6;
+    color: #1f4e79;
+}
+
+.tab.active {
+    background: #1f4e79;
+    color: white;
+}
+
+/* ---------- DASHBOARD ---------- */
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.topbar h2 {
+    margin: 0;
+}
+
+.topbar p {
+    margin: 4px 0 0 0;
+    color: #555;
+}
+
+.balance-card {
+    background: #1f4e79;
+    color: white;
+    padding: 20px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.balance-card p {
+    margin: 0;
+}
+
+.balance-card h1 {
+    margin: 8px 0 0 0;
+    font-size: 34px;
+}
+
+.toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 15px;
+    align-items: center;
+}
+
+/* ---------- TABLE ---------- */
+.table-wrap {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+th {
+    background: #1f4e79;
+    color: white;
+    text-align: left;
+    padding: 8px;
+}
+
+td {
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+}
+
+tr:nth-child(even) td {
+    background: #f5f8fc;
+}
+
+.credit {
+    color: #1e8449;
+    font-weight: bold;
+}
+
+.debit {
+    color: #c0392b;
+    font-weight: bold;
+}
+
+/* ---------- OTHER ---------- */
+.link {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.link a {
+    color: #1f4e79;
+}
+
+.hidden {
+    display: none;
+}

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Account - Bank Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="dashboard">
+
+    <header>
+        <h1>Bank Management System</h1>
+    </header>
+
+    <div class="container">
+
+        <div class="topbar">
+            <div>
+                <h2 id="welcome">Welcome</h2>
+                <p>Account No: <b id="accNoText"></b></p>
+            </div>
+            <button class="red" onclick="logout()">Logout</button>
+        </div>
+
+        <div class="balance-card">
+            <p>Available Balance</p>
+            <h1 id="balanceText">Rs. 0</h1>
+        </div>
+
+        <div class="toolbar">
+            <button onclick="showPanel('depositPanel')">Deposit</button>
+            <button onclick="showPanel('withdrawPanel')">Withdraw</button>
+            <button onclick="showPanel('transferPanel')">Transfer</button>
+            <button onclick="showPanel('historyPanel')">History</button>
+            <button onclick="showPanel('pinPanel')">Change PIN</button>
+        </div>
+
+        <div id="depositPanel" class="box hidden">
+            <h2>Deposit Money</h2>
+            <label>Amount (Rs.)</label>
+            <input type="number" id="depositAmount" min="1">
+            <button onclick="deposit()">Deposit</button>
+        </div>
+
+        <div id="withdrawPanel" class="box hidden">
+            <h2>Withdraw Money</h2>
+            <label>Amount (Rs.)</label>
+            <input type="number" id="withdrawAmount" min="1">
+            <p class="note">Minimum Rs. 500 must remain in your account.</p>
+            <button onclick="withdraw()">Withdraw</button>
+        </div>
+
+        <div id="transferPanel" class="box hidden">
+            <h2>Transfer Money</h2>
+            <label>Receiver's Account Number</label>
+            <input type="number" id="transferTo">
+            <label>Amount (Rs.)</label>
+            <input type="number" id="transferAmount" min="1">
+            <button onclick="transfer()">Transfer</button>
+        </div>
+
+        <div id="historyPanel" class="box hidden">
+            <h2>Transaction History</h2>
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Date</th>
+                            <th>Type</th>
+                            <th>Amount</th>
+                            <th>Balance After</th>
+                            <th>Note</th>
+                        </tr>
+                    </thead>
+                    <tbody id="historyBody"></tbody>
+                </table>
+            </div>
+        </div>
+
+        <div id="pinPanel" class="box hidden">
+            <h2>Change PIN</h2>
+            <label>Old PIN</label>
+            <input type="password" id="oldPin" maxlength="4">
+            <label>New PIN (4 digits)</label>
+            <input type="password" id="newPinValue" maxlength="4">
+            <button onclick="changePin()">Change PIN</button>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

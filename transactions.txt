@@ -1,0 +1,7 @@
+1|1001|Deposit|5000|5000|2026-10-19 15:57|Opening deposit
+2|1002|Deposit|5000|5000|2026-10-19 23:43|Opening deposit
+3|1002|Deposit|2000|7000|2026-10-20 10:32|Cash deposit
+4|1002|Withdraw|1000|6000|2026-10-20 10:32|Cash withdrawal
+5|1003|Deposit|50000|50000|2026-10-20 10:34|Opening deposit
+6|1002|Transfer Out|3000|3000|2026-10-20 10:37|To account 1003
+7|1003|Transfer In|3000|53000|2026-10-20 10:37|From account 1002
